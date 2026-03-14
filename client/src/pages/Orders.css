@@ -1,0 +1,95 @@
+.orders-page { padding: 40px 0 80px; }
+
+.orders-header { margin-bottom: 32px; }
+.orders-header h1 { font-family: var(--font-head); font-size: 36px; font-weight: 800; margin-bottom: 8px; }
+.orders-header p { color: var(--text3); }
+
+.orders-tabs {
+  display: flex;
+  gap: 0;
+  background: var(--bg2);
+  border-radius: 14px;
+  padding: 4px;
+  width: fit-content;
+  margin-bottom: 28px;
+}
+.o-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  background: transparent;
+  color: var(--text3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.o-tab.active { background: #fff; color: var(--text); box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.o-count {
+  background: var(--red);
+  color: #fff;
+  border-radius: 99px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.orders-list { display: flex; flex-direction: column; gap: 16px; }
+
+.order-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: box-shadow 0.2s;
+}
+.order-card:hover { box-shadow: var(--shadow); }
+
+.oc-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 14px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  flex-shrink: 0;
+  color: var(--text3);
+}
+.oc-img img { width: 100%; height: 100%; object-fit: cover; }
+
+.oc-info { flex: 1; min-width: 0; }
+.oc-top { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; flex-wrap: wrap; }
+.oc-top h3 { font-family: var(--font-head); font-size: 17px; font-weight: 700; }
+.oc-meta { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--text2); flex-wrap: wrap; margin-bottom: 6px; }
+.oc-date { font-size: 12px; color: var(--text3); }
+
+.order-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.order-type-badge.buy { background: #FFF5F5; color: var(--red); }
+.order-type-badge.borrow { background: #EFF6FF; color: #3B82F6; }
+
+.oc-actions { display: flex; flex-direction: column; gap: 8px; flex-shrink: 0; }
+
+.orders-loading { display: flex; flex-direction: column; gap: 16px; }
+.order-skeleton {
+  height: 110px;
+  border-radius: var(--radius);
+  background: linear-gradient(90deg, var(--bg) 25%, #fff 50%, var(--bg) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
